@@ -12,6 +12,7 @@
     "depgraph-noext": "mkdir -p build/ && (cd src/ && madge . --dot -x \"`node -e \"console.log(Object.keys(require('../webpack.config').externals).map(s => '^'+s+'$').join('|'))\"`\") > build/depgraph-noext.gv",
     "lint": "eslint --cache webpack.config.js src/",
     "prod": "webpack --mode=production --progress",
+    "build": "webpack --mode=production",
     "start": "webpack serve --progress",
     "watch": "webpack --watch --progress"
   },
